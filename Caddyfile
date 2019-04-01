@@ -1,0 +1,18 @@
+api.bruin-bite.com {
+    gzip
+    log stdout
+    errors stderr
+    tls terrenceho.books@gmail.com
+    proxy /api/v1/menu menu:5000 {
+        transparent
+    }
+
+    proxy /api/v1/users users:8000 {
+        transparent
+    }
+
+    proxy /api/v1/messaging daphne:8888 {
+        transparent
+        websocket
+    }
+}

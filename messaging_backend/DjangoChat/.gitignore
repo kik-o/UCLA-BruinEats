@@ -1,0 +1,9 @@
+.cache/
+.coverage
+.tox/
+htmlcov/
+staticfiles/
+venv/
+chatapp2/
+virtual/
+virtual2/
